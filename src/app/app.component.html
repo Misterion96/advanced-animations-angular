@@ -1,0 +1,20 @@
+<button (click)="show = !show" style="width: 100px;">
+    {{ show ? 'Hide' : 'Show'}}
+</button>
+
+<div style="display: flex; gap: 8px">
+    <app-item *ngIf="show"
+              [@collapse]="options"
+              (@collapse.start)="onAnimationEvent($event)"
+              (@collapse.done)="onAnimationEvent($event)"
+    >
+        Angular animation item
+    </app-item>
+
+    <app-item
+            class="css-animation"
+            [ngClass]="show ? 'show' : 'hide'">
+        Css animation item
+    </app-item>
+</div>
+
