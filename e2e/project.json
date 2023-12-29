@@ -16,5 +16,5 @@
       "outputs": ["{options.outputFile}"]
     }
   },
-  "implicitDependencies": ["agnular-prefer-reduce-motion"]
+  "implicitDependencies": ["angular-prefer-reduce-motion"]
 }

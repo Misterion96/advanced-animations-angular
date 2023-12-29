@@ -1,0 +1,25 @@
+:host {
+  .toggle {
+    width: 100px;
+  }
+
+  .item {
+    background: #ffa6a6;
+
+    @media (prefers-reduced-motion: reduce) {
+      background: #8eff8a;
+    }
+  }
+
+  .show {
+    opacity: 1;
+  }
+
+  .hide {
+    opacity: 0;
+  }
+
+  .css-animation {
+    transition: opacity var(--animation-duration) linear;
+  }
+}

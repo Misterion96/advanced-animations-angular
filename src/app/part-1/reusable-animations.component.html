@@ -1,0 +1,22 @@
+<div class="flex">
+    <button (click)="state = !state">{{
+        state ? 'close' : 'open'
+        }}</button>
+</div>
+
+<div class="flex">
+    <div *ngIf="state" class="example-block" [@collapse]="slowAnimation">
+        <div class="block">Slow</div>
+    </div>
+    <div *ngIf="state" class="example-block" [@collapse]="fastAnimation">
+        <div class="block">Fast</div>
+    </div>
+</div>
+
+<div class="flex">
+    <ng-container *ngFor="let duration of durations">
+        <app-bonus  *ngIf="state" [collapseDuration]="duration">
+            <div class="block">Duration {{duration}} ms</div>
+        </app-bonus>
+    </ng-container>
+</div>

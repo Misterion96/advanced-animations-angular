@@ -1,9 +1,9 @@
 /* eslint-disable */
 export default {
-  displayName: 'agnular-prefer-reduce-motion',
+  displayName: 'angular-prefer-reduce-motion',
   preset: './jest.preset.js',
   setupFilesAfterEnv: ['<rootDir>/src/test-setup.ts'],
-  coverageDirectory: './coverage/agnular-prefer-reduce-motion',
+  coverageDirectory: './coverage/angular-prefer-reduce-motion',
   transform: {
     '^.+\\.(ts|mjs|js|html)$': [
       'jest-preset-angular',

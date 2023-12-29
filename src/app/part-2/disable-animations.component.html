@@ -1,0 +1,14 @@
+<button (click)="state = !state" class="toggle">
+    {{ state ? 'Hide' : 'Show' }}
+</button>
+
+<div class="flex">
+    <app-item [@fade]="animationOptions" *ngIf="state" class="item">
+        Angular animation item
+    </app-item>
+
+    <app-item class="css-animation item"
+              [ngClass]="state ? 'show' : 'hide'">
+        Css animation item
+    </app-item>
+</div>
